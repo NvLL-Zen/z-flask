@@ -36,9 +36,12 @@ function glitchText(elementId, text) {
 
 document.addEventListener("DOMContentLoaded", () => {
   const mainName = document.querySelector("#P1-D1-H1");
+  const root = document.documentElement;
   const P1_D1 = document.querySelector("#P1-D1");
   const changeName = "Hello, I'm Fauzan Rizky";
   setTimeout(() => {
+    P1_D1.style.color = "black";
+    root.style.setProperty('--P1D1bg', '#FFFFFF')
     mainName.innerHTML = changeName;
     glitchText("P1-D1-H1", changeName);
   }, 2000);
