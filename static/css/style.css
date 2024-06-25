@@ -1,24 +1,41 @@
-#P1-D1 {
+body {
+    background-color: black;
+}
+#P1 {
     margin: 0 auto;
     height: 99vh;
     text-align: center;
     display: flex; 
     flex-direction: column; 
     justify-content: center; 
-    align-items: center;
+}
+
+#P1-D1 { 
     font-family: "Red Hat Text", sans-serif;
     font-weight: bold;
+    width: calc(fit-content + 10px);
+    display: inline-flex;
+    align-self: center;
+    position: relative;
+}
+
+#P1-D1::before {
+    position: absolute;
+    transform: skew(20deg);  
+    z-index: -1;
+}
+
+#P1-D1-T1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    position: relative;
+    background-color: aqua;
+    
 }
 
 
 
-* {
-    background-color: black;
-    color: white;
-}
 
-/* div {
-    border: 1px solid red;
-}
-*/
 
