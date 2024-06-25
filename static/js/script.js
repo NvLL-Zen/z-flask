@@ -1,50 +1,26 @@
-function glitchText(elementId, text) {
-  const letters =
-    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890";
-  let interval = null;
+import { xType,xRevType } from "./xType.js";
 
-  let iteration = 0;
+const sleep = ms => new Promise(r => setTimeout(r, ms));
 
-  clearInterval(interval);
-
-  interval = setInterval(() => {
-    const element = document.getElementById(elementId);
-    if (!element) {
-      console.error(`Element with ID '${elementId}' not found.`);
-      clearInterval(interval);
-      return;
-    }
-
-    element.innerText = element.innerText
-      .split("")
-      .map((letter, index) => {
-        if (index < iteration) {
-          return text[index];
-        }
-
-        return letters[Math.floor(Math.random() * 62)];
-      })
-      .join("");
-
-    if (iteration >= text.length) {
-      clearInterval(interval);
-    }
-
-    iteration += 1 / 3;
-  }, 30);
-}
-
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
   const mainName = document.querySelector("#P1-D1-H1");
   const root = document.documentElement;
-  const P1_D1 = document.querySelector("#P1-D1");
-  const changeName = "Hello, I'm Fauzan Rizky";
-  setTimeout(() => {
-    P1_D1.style.color = "black";
+  const changeNameEng = "Hello, I'm Fauzan Rizky";
+  const changeNameZh = "哈喽, 我是 法武赞•力泽琪";
+  await sleep(1500)
+  while(true){
     root.style.setProperty('--P1D1bg', '#FFFFFF')
-    mainName.innerHTML = changeName;
-    glitchText("P1-D1-H1", changeName);
-  }, 2000);
-});
+    xRevType(mainName, "_")
+    await sleep(700)
+    xType(mainName, changeNameEng, "_")
+    await sleep(5000)
 
-console.log("Version 1.34")
+    root.style.setProperty('--P1D1bg', '#51EEFC')
+    xRevType(mainName, "_")
+    await sleep(1150)
+    xType(mainName, changeNameZh, "_")
+    await sleep(5000)
+  }
+
+
+})

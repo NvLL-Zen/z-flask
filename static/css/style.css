@@ -9,7 +9,7 @@ body {
 #P1 {
     margin: 0 auto;
     height: 99vh;
-    text-align: center;
+    text-align: left;
     display: flex; 
     flex-direction: column; 
     justify-content: center; 
@@ -23,7 +23,10 @@ body {
     flex-direction: column;
     align-self: center;
     position: relative;
-    padding: 1.5vw;
+    padding: 1vw;
+    padding-left: 3vw;
+    padding-right: 2.5vw;
+    width: 40vw;
 }
 
 #P1-D1::before {
