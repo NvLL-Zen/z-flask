@@ -1,0 +1,23 @@
+#P1-D1 {
+    margin: 0 auto;
+    height: 99vh;
+    text-align: center;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+    font-family: "Red Hat Text", sans-serif;
+    font-weight: bold;
+}
+
+
+* {
+    background-color: black;
+    color: white;
+}
+
+/* div {
+    border: 1px solid red;
+}
+*/
+
