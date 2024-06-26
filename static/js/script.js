@@ -21,6 +21,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     xType(mainName, changeNameZh, "_")
     await sleep(5000)
   }
-
-
 })
+
+console.log("Hello, developer")
