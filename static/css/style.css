@@ -6,6 +6,11 @@ body {
     background-color: black;
     margin: 0;
 }
+
+h1, h2 {
+    margin: 0;
+}
+
 #P1 {
     margin: 0 auto;
     height: 99vh;
@@ -46,10 +51,12 @@ body {
     z-index: 1; /* Make sure text is above the skewed background */
 }
 
-h1, h2 {
-    margin: 0;
-}
-
+@media only screen and (max-width: 720px) {
+    #P1-D1 {
+        font-size: 3vw;
+        width: 72vw;
+    }
+  }
 
 
 

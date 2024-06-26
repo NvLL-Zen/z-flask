@@ -11,13 +11,13 @@ document.addEventListener("DOMContentLoaded", async () => {
   while(true){
     root.style.setProperty('--P1D1bg', '#FFFFFF')
     xRevType(mainName, "_")
-    await sleep(700)
+    await sleep(750)
     xType(mainName, changeNameEng, "_")
     await sleep(5000)
 
     root.style.setProperty('--P1D1bg', '#51EEFC')
     xRevType(mainName, "_")
-    await sleep(1150)
+    await sleep(1200)
     xType(mainName, changeNameZh, "_")
     await sleep(5000)
   }
