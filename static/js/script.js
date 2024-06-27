@@ -23,4 +23,4 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 })
 
-console.log("AAAAAAAA")
+console.log("AAAAAAA")
