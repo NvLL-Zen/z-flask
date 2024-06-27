@@ -1,4 +1,5 @@
-from flask import Flask, request, abort ,render_template
+from flask import Flask, request, Response, abort ,render_template
+from json import dumps
 import git
 import hmac
 import hashlib
@@ -16,11 +17,11 @@ app = Flask(__name__)
 
 @app.route('/update_server', methods=['POST'])
 def update_server():
-    x_hub_signature = request.headers.get('X-Hub-Signature')
-    if not is_valid_signature(x_hub_signature, request.data, "MULUTANDAKONTOL"):
-        print('Deploy signature failed: {sig}'.format(sig=x_hub_signature))
-        abort()
     if request.method == 'POST':
+        x_hub_signature = request.headers.get('X-Hub-Signature')
+        if not is_valid_signature(x_hub_signature, request.data, "MULUTANDAKONTOL"):
+            error_message = dumps({'Message': 'YOU SHALL NOT PASS!!!'})
+            abort(Response(error_message, 401))
         repo = git.Repo('/home/Zenriel/z-flask/')
         origin = repo.remotes.origin
         origin.pull()
