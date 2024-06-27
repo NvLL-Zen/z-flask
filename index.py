@@ -9,6 +9,7 @@ def update_server():
         repo = git.Repo('path/to/git_repo')
         origin = repo.remotes.origin
         origin.pull()
+        return 'Updated PythonAnywhere successfully', 200
 
 @app.route('/')
 def hello():
