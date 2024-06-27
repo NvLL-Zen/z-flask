@@ -1,0 +1,14 @@
+TIPS ON WEBHOOK:
+
+1. ASSURE IT'S CORRECT PATH: EXAMPLE: /home/kabdq/project
+2. @app.route('/update_server', methods=['POST'])
+def update_server():
+    if request.method == 'POST':
+        repo = git.Repo('/home/andoaw/project')
+        origin = repo.remotes.origin
+        origin.pull()
+        return 'Updated PythonAnywhere successfully', 200
+THATS THE PATH
+
+3. AFTER PUSHING, GIT PULL AND RELOAD THE SERVER
+4. DONE
