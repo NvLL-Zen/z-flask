@@ -23,4 +23,4 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 })
 
-console.log("KUMALALA SAVESTA")
+console.log("MULUT ANDA SOPAN")
