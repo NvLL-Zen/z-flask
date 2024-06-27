@@ -23,4 +23,4 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 })
 
-console.log("JS is working, yeay")
+console.log("Hello, world!")
