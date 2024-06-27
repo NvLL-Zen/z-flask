@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     await sleep(750)
     xType(mainName, changeNameEng, "_")
     await sleep(5000)
+    
 
     root.style.setProperty('--P1D1bg', '#51EEFC')
     xRevType(mainName, "_")

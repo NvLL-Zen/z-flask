@@ -2,6 +2,11 @@
     --P1D1bg: #51EEFC;
 }
 
+@font-face {
+    font-family: BMSpace;
+    src: url(./BMSPA___.TTF);
+}
+
 body {
     background-color: black;
     margin: 0;
@@ -11,7 +16,7 @@ h1, h2 {
     margin: 0;
 }
 
-#P1 {
+.section {
     margin: 0 auto;
     height: 99vh;
     text-align: left;
@@ -42,8 +47,22 @@ h1, h2 {
     bottom: 0;
     position: absolute;
     background-color: var(--P1D1bg);
+    box-shadow: red 11px -7px 0px 8.5px;
     transform: skew(20deg);  
     z-index: -1;
+}
+
+#P1-D2 {
+    font-family: 'Red Hat Text', sans-serif;
+    color: red;
+    align-self: center;
+    text-align: center;
+    position: relative;
+    margin-top: 20vh;
+}
+
+#P2 {
+    border: 1px solid white;
 }
 
 .P1-D1 {
