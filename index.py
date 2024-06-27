@@ -8,6 +8,7 @@ def webhook():
     if request.method == 'POST':
         repo = git.Repo('path/to/git_repo')
         origin = repo.remotes.origin
+        origin.pull()
 
 
 @app.route('/')
