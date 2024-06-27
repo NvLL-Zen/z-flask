@@ -11,7 +11,7 @@ def update_server():
         repo = git.Repo('/home/Zenriel/z-flask/')
         origin = repo.remotes.origin
         origin.pull()
-        return 200
+        return 'Access Granted', 200
 
 @app.route('/')
 def hello():
