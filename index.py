@@ -1,11 +1,9 @@
 from flask import Flask, request ,render_template
 import git
-import hmac
-import hashlib
 
 app = Flask(__name__)
 
-@app.route('/update_server', methods=['POST'])
+@app.route('/4XQfRJ4RbV4anoFDCq5df5AkKSCoJ9Dd', methods=['POST'])
 def update_server():
     if request.method == 'POST':
         repo = git.Repo('/home/Zenriel/z-flask/')
