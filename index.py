@@ -6,7 +6,7 @@ app = Flask(__name__)
 @app.route('/update_server', methods=['POST'])
 def update_server():
     if request.method == 'POST':
-        repo = git.Repo('./')
+        repo = git.Repo('/home/Zenriel/z-flask/')
         origin = repo.remotes.origin
         origin.pull()
         return 'Updated PythonAnywhere successfully', 200
