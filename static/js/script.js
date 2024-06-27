@@ -23,4 +23,4 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 })
 
-console.log("Hello, developer")
+console.log("Hello, webhook")
