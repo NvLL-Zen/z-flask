@@ -1,6 +1,18 @@
-from flask import Flask, render_template
+from flask import Flask, request ,render_template
+import git
 
 app = Flask(__name__)
+
+@app.route('/RYxgOWavSXjuZRCtafAdSPQuEhNWyDxV', methods=['POST'])
+def webhook():
+    if request.method == 'POST':
+        repo = git.Repo('./')
+        origin = repo.remotes.origin
+        origin.pull()
+        return '', 200
+    else:
+        return '', 400
+
 
 @app.route('/')
 def hello():
