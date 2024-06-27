@@ -8,7 +8,6 @@ const xRevType = async (element, symbol) => {
         element.innerHTML = oldstr.join('')
         await sleep(50)
     }
-
 }
 
 const xType = async (element, text, symbol) => {

@@ -1,4 +1,4 @@
-import { xType,xRevType } from "./xType.js";
+import { xType,xRevType } from "./SymType.js";
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
