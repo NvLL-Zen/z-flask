@@ -7,6 +7,25 @@
     src: url(./BMSPA___.TTF);
 }
 
+@keyframes fade {
+    to { 
+        opacity: 1;
+        margin-left: 1vw; 
+    }
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes unblur {
+    to {
+        filter: blur(0px);
+    }
+}
+
 body {
     background-color: black;
     margin: 0;
@@ -70,24 +89,40 @@ h1, h2 {
 #P2-D1 {
     width: 50vw;
     height: 90vh;
-    padding: 20px;
-    margin-left: 2vh;
+    padding-top: 0px;
+    margin-left: 2vw;
 }
 
 #P2-D1-H1 {
     font-weight: bold;
     margin-bottom: 8vh;
+    margin-left: -2vw;
+    opacity: 0;
+    animation: fade 1s linear both;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
 }
 
 #P2-D1-H2 {
     margin-bottom: 4vh;
+    opacity: 0;
+    animation: fadeIn 1s linear both;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+}
+
+#P2-D1-H3 {
+    opacity: 0;
+    animation: fadeIn 1s linear both;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
 }
 
 #P2-D2 {
     width: 50vw;
     height: 94vh;
-    margin-right: 2vh;
-    margin-left: 2vh;
+    margin-right: 2vw;
+    margin-left: 2vw;
     border: 1px solid white;
 }
 
@@ -109,13 +144,17 @@ h1, h2 {
 #P2-D2-EX {
     display: flex;
     flex-direction: row;
-    padding-top: 5vh;
+    padding-top: 3vh;
 }
 
 #P2-D2-I1 {
-    border: 1px solid cyan;
+    border: 1px solid white;
+    filter: blur(20px);
     width: 20vw;
     height: max-content;
+    animation: unblur 1s linear both;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
 }
 
 #P2-D2-D2 {
@@ -164,7 +203,53 @@ h1, h2 {
         width: 72vw;
         padding-left: 6vw;
     }
+
+    #P2 {
+        flex-direction: column;
+    }
+
+    #P2-D1 {
+        width: 95vw;
+        height: 50vh;
+    }
+
+    #P2-D1-H1 {
+        margin-bottom: 4vh;
+    }
+
+    #P2-D2 {
+        width: 95vw;
+        height: 50vh;
+    }
+
+    #P2-D2-H1 {
+        font-size: 3vw;
+    }
+
+    #P2-D2-H2 {
+        margin-left: 53vw;
+    }
+
+    #P2-D2-I1 {
+        width: 30vw;
+        height: max-content;
+    }
+
+    #P2-D2-E3 {
+        font-size: 3vw;
+    }
+
+    .P2 {
+        font-size: 3vw;
+        border: 1px solid white;
+    }
+
+    .P2-D2-TermText {
+        font-size: 3vw;
+    }
+
   }
+
 
 
 

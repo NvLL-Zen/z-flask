@@ -24,4 +24,8 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 })
 
+window.addEventListener('scroll', () => {
+  document.body.style.setProperty('--scroll', window.scrollY / (document.body.offsetHeight - window.innerHeight));
+}, false);
+
 console.log("Hello, world!")
