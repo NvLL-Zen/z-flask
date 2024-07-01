@@ -200,18 +200,24 @@ h1, h2 {
 
 @media only screen and (max-width: 720px) {
     #P1-D1 {
-        font-size: 3vw;
+        font-size: 2.5vw;
         width: 72vw;
         padding-left: 6vw;
     }
 
+    #P1-D1::before {
+        box-shadow: red 11px -7px 0px 6px;
+    }
+
     #P2 {
         flex-direction: column;
+        justify-content: flex-start;
+        height: 99vh;
     }
 
     #P2-D1 {
         width: 95vw;
-        height: 50vh;
+        height: fit-content;
     }
 
     #P2-D1-H1 {
@@ -220,7 +226,8 @@ h1, h2 {
 
     #P2-D2 {
         width: 95vw;
-        height: 47vh;
+        height: 50vh;
+        margin-top: auto;
     }
 
     #P2-D2-H1 {
@@ -241,7 +248,7 @@ h1, h2 {
     }
 
     .P2 {
-        font-size: 3vw;
+        font-size: 3.75vw;
     }
 
     .P2-D2-TermText {
